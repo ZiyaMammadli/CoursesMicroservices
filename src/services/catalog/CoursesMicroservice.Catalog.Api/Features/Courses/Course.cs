@@ -11,7 +11,8 @@ namespace CoursesMicroservice.Catalog.Api.Features.Courses
         public string? Description { get; set; }
         public decimal Price { get; set; } = default!;
         public string? Picture { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime Created { get; set; }
+        public Feature Feature { get; set; } = default!;
         public Category Category { get; set; } = default!;
     }
 }
