@@ -14,13 +14,13 @@ namespace CoursesMicroservice.Catalog.Api.Repositories
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CourseConfiguration).Assembly);
         }
 
-        public AppDbContext Create(IMongoDatabase mongoDatabase)
+        public static AppDbContext Create(IMongoDatabase mongoDatabase)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>().UseMongoDB(mongoDatabase.Client,mongoDatabase.DatabaseNamespace.DatabaseName);
             return new AppDbContext(optionsBuilder.Options);
         }
 
-        DbSet<Course> Courses { get; set; }
-        DbSet<Category> Categories { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
