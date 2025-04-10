@@ -7,6 +7,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOptionExt();
 builder.Services.AddDatabaseServiceExt();
+
+
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
