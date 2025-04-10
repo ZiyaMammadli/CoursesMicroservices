@@ -1,6 +1,7 @@
 ﻿using CoursesMicroservice.Catalog.Api.Features.Categories;
 using CoursesMicroservice.Catalog.Api.Features.Courses;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 
 namespace CoursesMicroservice.Catalog.Api.Repositories
 {
@@ -11,6 +12,12 @@ namespace CoursesMicroservice.Catalog.Api.Repositories
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CourseConfiguration).Assembly);
+        }
+
+        public AppDbContext Create(IMongoDatabase mongoDatabase)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>().UseMongoDB(mongoDatabase.Client,mongoDatabase.DatabaseNamespace.DatabaseName);
+            return new AppDbContext(optionsBuilder.Options);
         }
 
         DbSet<Course> Courses { get; set; }
