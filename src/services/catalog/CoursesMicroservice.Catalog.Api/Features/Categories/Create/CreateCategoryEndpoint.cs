@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace CoursesMicroservice.Catalog.Api.Features.Categories.Create
 {
