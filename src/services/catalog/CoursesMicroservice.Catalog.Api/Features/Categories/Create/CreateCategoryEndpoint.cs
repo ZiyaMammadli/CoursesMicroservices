@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using CoursesMicroservice.Shared;
+using CoursesMIcroservice.Shared.Extentionsı;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoursesMicroservice.Catalog.Api.Features.Categories.Create
@@ -10,10 +12,7 @@ namespace CoursesMicroservice.Catalog.Api.Features.Categories.Create
             group.MapPost("/", async (CreateCategoryCommandRequest request, IMediator mediatr) =>
             {
                 var result = await mediatr.Send(request);
-                return new ObjectResult(result)
-                {
-                    StatusCode = result.Status.GetHashCode(),
-                };
+                return result.ToGenericResult();
             });
             return group;
         }
