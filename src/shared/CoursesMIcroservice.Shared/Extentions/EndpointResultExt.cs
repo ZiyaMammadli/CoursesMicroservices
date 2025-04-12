@@ -1,6 +1,5 @@
 ﻿using CoursesMicroservice.Shared;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace CoursesMIcroservice.Shared.Extentionsı
