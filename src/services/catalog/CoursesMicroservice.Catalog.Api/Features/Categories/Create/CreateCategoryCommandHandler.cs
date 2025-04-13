@@ -14,7 +14,7 @@ namespace CoursesMicroservice.Catalog.Api.Features.Categories.Create
             var existCategory= await context.Categories.AnyAsync(c=>c.Name==request.name,cancellationToken);
             if(existCategory)
             {
-                ServiceResult<CreateCategoryCommandResponse>.Error("Category name already exists", $"Category name : {request.name} already exists", HttpStatusCode.BadRequest);
+                return ServiceResult<CreateCategoryCommandResponse>.Error("Category name already exists", $"Category name : {request.name} already exists", HttpStatusCode.BadRequest);
             }
 
             Category category= new ()
