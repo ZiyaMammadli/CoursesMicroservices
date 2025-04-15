@@ -1,5 +1,4 @@
 ﻿using CoursesMIcroservice.Shared.Extentionsı;
-using MediatR;
 
 namespace CoursesMicroservice.Catalog.Api.Features.Categories.GetById
 {

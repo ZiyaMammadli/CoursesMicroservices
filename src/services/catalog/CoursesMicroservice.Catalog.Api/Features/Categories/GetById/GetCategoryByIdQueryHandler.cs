@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
 using CoursesMicroservice.Catalog.Api.Repositories;
-using CoursesMicroservice.Shared;
-using MediatR;
 using System.Net;
 
 namespace CoursesMicroservice.Catalog.Api.Features.Categories.GetById

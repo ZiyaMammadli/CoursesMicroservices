@@ -1,7 +1,5 @@
 ﻿using CoursesMicroservice.Catalog.Api.Repositories;
-using CoursesMicroservice.Shared;
 using MassTransit;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 

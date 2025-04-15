@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
 using CoursesMicroservice.Catalog.Api.Repositories;
-using CoursesMicroservice.Shared;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace CoursesMicroservice.Catalog.Api.Features.Categories.GetAll
