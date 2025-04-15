@@ -1,4 +1,6 @@
-﻿using FluentValidation;
+﻿using CoursesMicroservice.Shared;
+using CoursesMIcroservice.Shared.Extentionsı;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,7 +28,7 @@ namespace CoursesMIcroservice.Shared.Filters
             var validateResult = await validator.ValidateAsync(requestModel);
 
             if (!validateResult.IsValid)
-            {
+            {                
                 return Results.ValidationProblem(validateResult.ToDictionary());
             }
 
