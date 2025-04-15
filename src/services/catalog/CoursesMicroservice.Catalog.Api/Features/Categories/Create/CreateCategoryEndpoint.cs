@@ -8,7 +8,7 @@ namespace CoursesMicroservice.Catalog.Api.Features.Categories.Create
     {
         public static RouteGroupBuilder CreateCategoryGroupItemEndpoint(this RouteGroupBuilder group)
         {
-            group.MapPost("/create", async (CreateCategoryCommandRequest request, IMediator mediatr) => 
+            group.MapPost("/Create", async (CreateCategoryCommandRequest request, IMediator mediatr) => 
             {
                 var result = await mediatr.Send(request);
                 return result.ToGenericResult();
