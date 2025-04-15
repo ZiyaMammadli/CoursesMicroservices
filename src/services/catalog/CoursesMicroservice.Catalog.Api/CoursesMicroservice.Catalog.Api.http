@@ -1,6 +1,14 @@
-@CoursesMicroservice.Catalog.Api_HostAddress = http://localhost:5130
+@BaseAdress = http://localhost:5130
 
-GET {{CoursesMicroservice.Catalog.Api_HostAddress}}/weatherforecast/
+GET {{BaseAdress}}/api/categories/GetAll
 Accept: application/json
-
 ###
+Post   {{BaseAdress}}/api/categories/Create
+Accept: application/json
+Content-Type: application/json
+{
+  "name": "" 
+}
+###
+GET {{BaseAdress}}/api/categories/GetById/08dd7be8-b7cf-e856-c87f-54cad8960000
+Accept: application/json
