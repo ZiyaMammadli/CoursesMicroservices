@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CoursesMicroservice.Catalog.Api.Features.Categories.Create;
+using CoursesMicroservice.Catalog.Api.Features.Courses.Create;
 
 namespace CoursesMicroservice.Catalog.Api.Features.Courses
 {
@@ -7,7 +8,7 @@ namespace CoursesMicroservice.Catalog.Api.Features.Courses
     {
         public CourseMapping()
         {
-            CreateMap<Course,CreateCategoryCommandRequest>().ReverseMap();
+            CreateMap<Course,CreateCourseCommandRequest>().ReverseMap();
         }
     }
 }

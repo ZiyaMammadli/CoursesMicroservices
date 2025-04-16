@@ -14,7 +14,7 @@ namespace CoursesMicroservice.Catalog.Api.Repositories
             builder.Property(c => c.Id).ValueGeneratedNever();
             builder.Property(c => c.Name).HasElementName("name").HasMaxLength(100);
             builder.Property(c => c.Description).HasElementName("description").HasMaxLength(1000);
-            builder.Property(c => c.Picture).HasElementName("picture").HasMaxLength(100);
+            builder.Property(c => c.ImageUrl).HasElementName("imageUrl").HasMaxLength(100);
             builder.Property(c => c.UserId).HasElementName("userid");
             builder.Property(c => c.CategoryId).HasElementName("categoryid");
             builder.Property(c => c.Created).HasElementName("created");
