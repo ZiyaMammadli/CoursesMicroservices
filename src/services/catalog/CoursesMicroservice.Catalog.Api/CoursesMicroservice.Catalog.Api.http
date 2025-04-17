@@ -12,3 +12,14 @@ Content-Type: application/json
 ###
 GET {{BaseAdress}}/api/categories/GetById/08dd7be8-b7cf-e856-c87f-54cad8960000
 Accept: application/json
+###
+Post   {{BaseAdress}}/api/courses/Create
+Accept: application/json
+Content-Type: application/json
+{
+  "categoryId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name": "string",
+  "description": "string",
+  "price": 0,
+  "imageUrl": "string"
+}
